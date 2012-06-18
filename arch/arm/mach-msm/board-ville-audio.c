@@ -748,7 +748,7 @@ static int msm8960_slim_0_rx_be_hw_params_fixup(struct snd_soc_pcm_runtime *rtd,
 			SNDRV_PCM_HW_PARAM_CHANNELS);
 
 	pr_debug("%s()\n", __func__);
-	rate->min = rate->max = 48000;
+	rate->min = rate->max = 96000;
 	channels->min = channels->max = msm8960_slim_0_rx_ch;
 
 	return 0;
@@ -764,7 +764,7 @@ static int msm8960_slim_0_tx_be_hw_params_fixup(struct snd_soc_pcm_runtime *rtd,
 			SNDRV_PCM_HW_PARAM_CHANNELS);
 
 	pr_debug("%s()\n", __func__);
-	rate->min = rate->max = 48000;
+	rate->min = rate->max = 96000;
 	channels->min = channels->max = msm8960_slim_0_tx_ch;
 
 	return 0;
@@ -777,7 +777,7 @@ static int msm8960_be_hw_params_fixup(struct snd_soc_pcm_runtime *rtd,
 	SNDRV_PCM_HW_PARAM_RATE);
 
 	pr_debug("%s()\n", __func__);
-	rate->min = rate->max = 48000;
+	rate->min = rate->max = 96000;
 
 	return 0;
 }
