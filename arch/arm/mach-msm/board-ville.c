@@ -359,11 +359,11 @@ enum {
 
 #endif
 
-#define MSM_PMEM_ADSP_SIZE         0x6D00000
+#define MSM_PMEM_ADSP_SIZE         0x6000000 /* 96 Mbytes */
 #define MSM_PMEM_ADSP2_SIZE        0x700000
 #define MSM_PMEM_AUDIO_SIZE        0x2B4000
-#define MSM_PMEM_SIZE 0x4000000 /* 64 Mbytes */
-#define MSM_LIQUID_PMEM_SIZE 0x4000000 /* 64 Mbytes */
+#define MSM_PMEM_SIZE 0x2000000 /* 32 Mbytes */
+#define MSM_LIQUID_PMEM_SIZE 0x1000000 /* 16 Mbytes */
 
 #ifdef CONFIG_MSM_MULTIMEDIA_USE_ION
 #define MSM_PMEM_KERNEL_EBI1_SIZE  0x280000
@@ -4285,11 +4285,11 @@ static struct msm_spm_platform_data msm_spm_data[] __initdata = {
 
 #ifdef CONFIG_PERFLOCK
 static unsigned ville_perf_acpu_table[] = {
-	810000000, /* LOWEST */
-	918000000, /* LOW */
-	1026000000, /* MEDIUM */
-	1242000000,/* HIGH */
-	1512000000, /* HIGHEST */
+	918000000, /* LOWEST */
+	1188000000, /* LOW */
+	1512000000, /* MEDIUM */
+	1890000000,/* HIGH */
+	2106000000, /* HIGHEST */
 };
 
 static struct perflock_platform_data ville_perflock_data = {

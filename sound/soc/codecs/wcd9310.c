@@ -32,7 +32,7 @@
 #include "wcd9310.h"
 
 #define WCD9310_RATES (SNDRV_PCM_RATE_8000|SNDRV_PCM_RATE_16000|\
-			SNDRV_PCM_RATE_32000|SNDRV_PCM_RATE_48000|SNDRV_PCM_RATE_96000)
+			SNDRV_PCM_RATE_32000|SNDRV_PCM_RATE_48000)
 
 #define NUM_DECIMATORS 10
 #define NUM_INTERPOLATORS 7
@@ -3011,10 +3011,6 @@ static int tabla_hw_params(struct snd_pcm_substream *substream,
 	case 48000:
 		tx_fs_rate = 0x03;
 		rx_fs_rate = 0x60;
-		break;
-	case 96000:
-		tx_fs_rate = 0x04;
-		rx_fs_rate = 0x80;
 		break;
 	default:
 		pr_err("%s: Invalid sampling rate %d\n", __func__,
